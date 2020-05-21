@@ -71,7 +71,9 @@
     </b-container>
 </template>
 
-<script>
+<script>    
+    const IndiaAPI = "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&apiKey=f0ef8a0a3a3240f3b5d4b7c9165fd281";
+    const CoronaAPI = "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?q=coronavirus&apiKey=f0ef8a0a3a3240f3b5d4b7c9165fd281"
     export default {
         name:'News',
         data(){
@@ -86,7 +88,7 @@
         },
         created()
         {
-            fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=f0ef8a0a3a3240f3b5d4b7c9165fd281')
+            fetch(IndiaAPI)
             .then(response => response.json())
             .then(data => {
                 data.articles.forEach(element => {
@@ -102,7 +104,7 @@
                 this.indiaNews = true;
             });
 
-            fetch('https://newsapi.org/v2/top-headlines?q=coronavirus&apiKey=f0ef8a0a3a3240f3b5d4b7c9165fd281')
+            fetch(CoronaAPI)
             .then(response => response.json())
             .then(data => {
                 data.articles.forEach(element => {

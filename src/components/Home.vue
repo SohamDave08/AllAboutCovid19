@@ -128,7 +128,6 @@
     import mapIcon from '../assets/contamination.png';
     const API = 'https://covid19-server.chrismichael.now.sh/api/v1/AllReports';
     var tempAPI;
-    //var tempMapAPI;
     export default {
         name: 'world',
         data() {
@@ -159,7 +158,6 @@
         components: {
             ICountUp
         },
-        mounted() {console.log('Inside HOME')},
         created() {
             fetch(API)
             .then(response => response.json())
