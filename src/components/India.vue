@@ -103,7 +103,7 @@
       </md-table-row>
     </md-table>
 
-    <h3 class="text-center pt-5 m-4">District wise zones in India</h3>
+    <!-- <h3 class="text-center pt-5 m-4">District wise zones in India</h3>
     <md-table v-model="searchedZone" md-sort="zone" md-sort-order="asc" md-card md-fixed-header class="mb-4">
       <md-table-toolbar>
         <md-field md-clearable class="md-toolbar-section-end pl-2" style="max-width: 300px">
@@ -133,7 +133,7 @@
           <span v-if="item.greenZone" style="color: green;">{{ item.zone }}</span>
         </md-table-cell>
       </md-table-row>
-    </md-table>
+    </md-table> -->
     <h5 class="pt-5 pb-3 text-center" style="color: red;">Central Helpline Number:<br> <a class="pt-1" href="tel:+91-11-239780461" style="color: red; text-decoration: none;">+91-11-23978046</a></h5>
     <center><a href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf" target="_Blank"><b-button variant="primary p-2" size="sm" >Helpline Numbers of States & Union Territories (UTs)</b-button></a></center>
   </b-container>
@@ -155,13 +155,13 @@
     return items
   }
 
-  const searchByZone = (items, term) => {
-    if (term) {
-      return items.filter(item => toLower(item.state).includes(toLower(term)))
-    }
+  // const searchByZone = (items, term) => {
+  //   if (term) {
+  //     return items.filter(item => toLower(item.state).includes(toLower(term)))
+  //   }
 
-    return items
-  }
+  //   return items
+  // }
 
   export default {
     name: 'India',
@@ -171,10 +171,10 @@
       searchedCase: [],
       tableDataCase: false,
       cases: [],
-      searchZone: null,
-      searchedZone: [],
-      tableDataZone: false,
-      zones: [],
+      // searchZone: null,
+      // searchedZone: [],
+      // tableDataZone: false,
+      // zones: [],
       cardData: false,
       confirmedCasesIndia: 0,
       recoveredIndia: 0,
@@ -187,9 +187,9 @@
       searchOnTableCase () {
         this.searchedCase = searchByState(this.cases, this.searchCase)
       },
-      searchOnTableZone () {
-        this.searchedZone = searchByZone(this.zones, this.searchZone)
-      }
+      // searchOnTableZone () {
+      //   this.searchedZone = searchByZone(this.zones, this.searchZone)
+      // }
     },
     components: {
       ICountUp
@@ -226,41 +226,41 @@
         this.searchedCase = this.cases;
         this.cardData = true;
       });
-      fetch('https://api.covid19india.org/zones.json')
-      .then(response => response.json())
-      .then(data => {
-        data.zones.forEach(element => {
-          var user = {};
-          user.district = element.district;
-          user.state = element.state;
-          user.zone = element.zone;
-          if(element.zone == 'Red')
-          {
-            user.redZone = 1;
-            user.greenZone = 0;
-            user.orangeZone = 0;
-            console.log('red');
-          }
-          else if(element.zone == 'Orange')
-          {
-            user.redZone = 0;
-            user.greenZone = 0;
-            user.orangeZone = 1;
-            console.log('orange');
-          }
-          else if(element.zone == 'Green')
-          {
-            user.redZone = 0;
-            user.greenZone = 1;
-            user.orangeZone = 0;
-            console.log('green');
-          } 
+      // fetch('https://api.covid19india.org/zones.json')
+      // .then(response => response.json())
+      // .then(data => {
+      //   data.zones.forEach(element => {
+      //     var user = {};
+      //     user.district = element.district;
+      //     user.state = element.state;
+      //     user.zone = element.zone;
+      //     if(element.zone == 'Red')
+      //     {
+      //       user.redZone = 1;
+      //       user.greenZone = 0;
+      //       user.orangeZone = 0;
+      //       console.log('red');
+      //     }
+      //     else if(element.zone == 'Orange')
+      //     {
+      //       user.redZone = 0;
+      //       user.greenZone = 0;
+      //       user.orangeZone = 1;
+      //       console.log('orange');
+      //     }
+      //     else if(element.zone == 'Green')
+      //     {
+      //       user.redZone = 0;
+      //       user.greenZone = 1;
+      //       user.orangeZone = 0;
+      //       console.log('green');
+      //     } 
           
-          this.zones.push(user);
-        });
-        this.tableDataZone = true;
-        this.searchedZone = this.zones;
-      });
+      //     this.zones.push(user);
+      //   });
+      //   this.tableDataZone = true;
+      //   this.searchedZone = this.zones;
+      // });
     }
   }
 </script>

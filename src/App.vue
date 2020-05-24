@@ -27,57 +27,40 @@
     <br><br><br>
     <div class="footer py-3">
       <b-container>
-        <b-row class="justify-content-center">
-          <div class="col-md-6 p-2">
-            <center>
-              <i class="fa fa-phone fa-3x"></i>
-              <h5 class="p-2">Call</h5>
-              <p>
-                Soham Dave :&nbsp;<strong><a href="tel:+919820145991" style="color: black; text-decoration: none;">+91-9820145991</a></strong>&nbsp;(IND)<br>
-                Rudra Dave :&nbsp;<strong><a href="tel:+18482520030" style="color: black; text-decoration: none;">+1(848)2520030</a></strong>&nbsp;(USA)
-              </p>
-            </center>
-          </div>
-          <div class="col-md-6 p-2">
-            <center>
-              <i class="fa fa-envelope fa-3x"></i>
-              <h5 class="p-2">Email us</h5>
-              <p>
-                <a href="mailto:dave.soham2000@gmail.com" style="color: black; text-decoration: none;">dave.soham2000@gmail.com</a><br>
-                <a href="mailto:dave.rudra97@gmail.com" style="color: black; text-decoration: none;">dave.rudra97@gmail.com</a>
-              </p>
-            </center>
-          </div>
-        </b-row>
         <br>
-        <h5 class="text-center mt-2">Connect with us:</h5>
+        <h4 class="text-center mt-2">Connect with us:</h4>
         <b-row class="justify-content-center pt-1">
-          
-          <div class="col-md-4 col-6">
+          <div class="col-md-6 col-sm-12 col-12">
             <b-row class="justify-content-center">
               <div class="card" style="background(255,255,255,0); border: none; width: max-content">
                 <div class="card-body">
-                  <h6 class="card-title text-center">Soham Dave</h6>
+                  <h5 class="card-title text-center pb-3">Rudra Dave</h5>
+                  <a class="mx-3" href="https://github.com/rdave97" target="_blank">
+                    <i class="fab fa-github fa-2x"></i>
+                  </a>
+                  <a class="mx-3" href="https://www.linkedin.com/in/rudra-dave/" target="_blank">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                  </a>
+                  <a class="mx-3" href="mailto:dave.rudra97@gmail.com">
+                    <i class="fas fa-envelope fab fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </b-row>
+          </div>
+          <div class="col-md-6 col-sm-12 col-12 pt-1">
+            <b-row class="justify-content-center">
+              <div class="card" style="background(255,255,255,0); border: none; width: max-content">
+                <div class="card-body">
+                  <h5 class="card-title text-center pb-3">Soham Dave</h5>
                   <a class="mx-3" href="https://github.com/DaveSoham08" target="_blank">
                     <i class="fab fa-github fa-2x"></i>
                   </a>
                   <a class="mx-3" href="https://www.linkedin.com/in/soham-dave-115206189/" target="_blank">
                     <i class="fab fa-linkedin fa-2x"></i>
                   </a>
-                </div>
-              </div>
-            </b-row>
-          </div>
-          <div class="col-md-4 col-6">
-            <b-row class="justify-content-center">
-              <div class="card" style="background(255,255,255,0); border: none; width: max-content">
-                <div class="card-body">
-                  <h6 class="card-title text-center">Rudra Dave</h6>
-                  <a class="mx-3" href="https://github.com/rdave97" target="_blank">
-                    <i class="fab fa-github fa-2x"></i>
-                  </a>
-                  <a class="mx-3" href="https://www.linkedin.com/in/rudra-dave/" target="_blank">
-                    <i class="fab fa-linkedin fa-2x"></i>
+                  <a class="mx-3" href="mailto:dave.soham2000@gmail.com">
+                    <i class="fas fa-envelope fab fa-2x"></i>
                   </a>
                 </div>
               </div>
@@ -90,7 +73,7 @@
     <div class="credits">
       <div class="col-md-12 py-3 text-center">
         <div style="font-size: 14px;"><i>Remember, The sun always shines after a storm</i></div> <br>
-        <h5 style="  font-size: 15px;">Developed with <span style="color:#ff3333">❤</span> by <a href="https://www.linkedin.com/in/soham-dave-115206189/" target="_blank" style="color:white; text-decoration: none;">Soham Dave</a> & <a href="https://www.linkedin.com/in/rudra-dave/" target="_blank" style="color:white; text-decoration: none;">Rudra Dave</a></h5>
+        <h5 style="  font-size: 15px;">Developed with <span style="color:#ff3333">❤</span> by <a href="https://www.linkedin.com/in/rudra-dave/" target="_blank" style="color:white; text-decoration: none;">Rudra Dave</a> & <a href="https://www.linkedin.com/in/soham-dave-115206189/" target="_blank" style="color:white; text-decoration: none;">Soham Dave</a></h5>
       </div>
     </div>
   </div>
