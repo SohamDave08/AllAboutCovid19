@@ -14,7 +14,7 @@
           <b-nav-item class="link-nav" @click="indiaComp">India</b-nav-item>
           <b-nav-item class="link-nav" @click="newsComp">News</b-nav-item>
           <b-nav-item class="link-nav" @click="guidelineComp">Preventative Measures</b-nav-item>
-          <b-nav-item class="link-nav last-nav" @click="blogComp">Mental Health Matters</b-nav-item>
+          <b-nav-item class="link-nav last-nav" @click="blogComp">Outlive Covid</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
