@@ -13,7 +13,8 @@
           <b-nav-item class="link-nav" @click="homeComp">Home</b-nav-item>
           <b-nav-item class="link-nav" @click="indiaComp">India</b-nav-item>
           <b-nav-item class="link-nav" @click="newsComp">News</b-nav-item>
-          <b-nav-item class="link-nav last-nav" @click="guidelineComp">Preventative Measures</b-nav-item>
+          <b-nav-item class="link-nav" @click="guidelineComp">Preventative Measures</b-nav-item>
+          <b-nav-item class="link-nav last-nav" @click="blogComp">Mental Health Matters</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -23,6 +24,7 @@
       <India v-if="india" class="pt-4"/>
       <News v-if="news" class="pt-4" />
       <Guidelines v-if="guidelines" class="pt-4" />
+      <Blog v-if="blog" class="pt-4" />
     </div>
     <br><br><br>
     <div class="footer py-3">
@@ -84,6 +86,7 @@
   import India from './components/India.vue';
   import News from './components/News.vue';
   import Guidelines from './components/Guidelines.vue';
+  import Blog from './components/Blog.vue';
   import image from './assets/image.png';
   export default {
     name: 'app',
@@ -94,13 +97,15 @@
         india: false,
         news: false,
         guidelines: false,
+        blog: false,
       }
     },
     components:{
       Home: Home,
       India: India,
       News: News,
-      Guidelines: Guidelines
+      Guidelines: Guidelines,
+      Blog: Blog
     },
     methods: {
       homeComp()
@@ -115,6 +120,7 @@
         this.india = true;
         this.home = false;
         this.news = false;
+        this.blog = false;
         this.guidelines = false;
       },
       newsComp()
@@ -122,6 +128,7 @@
         this.news= true;
         this.india = false;
         this.home = false;
+        this.blog = false;
         this.guidelines = false;
       },
       guidelineComp()
@@ -129,7 +136,16 @@
         this.news= false;
         this.india = false;
         this.home = false;
+        this.blog = false;
         this.guidelines = true;
+      },
+      blogComp()
+      {
+        this.news= false;
+        this.india = false;
+        this.home = false;
+        this.guidelines = false;
+        this.blog = true;
       }
     }
   }

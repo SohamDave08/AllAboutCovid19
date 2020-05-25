@@ -115,7 +115,7 @@
 
 
     <h5 class="text-center" v-if="isCat">Essentials & Resources in {{ currState }}</h5>
-    <b-row class="justify-content-center py-3" v-if="isCat">
+    <div class="justify-content-center py-3" v-if="isCat">
       <b-form-group id="input-group-3" label-for="input-3" class="col-md-6 col-sm-12">
         <b-form-select
           id="input-3"
@@ -124,7 +124,7 @@
           required
         ></b-form-select>
       </b-form-group>
-    </b-row>
+    </div>
 
 
     <b-row class="justify-content-center pt-3">
