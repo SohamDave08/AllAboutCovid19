@@ -114,6 +114,7 @@
         this.india = false;
         this.news = false;
         this.guidelines = false;
+        this.blog = false;
       },
       indiaComp()
       {

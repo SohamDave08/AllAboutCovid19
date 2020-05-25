@@ -20,6 +20,9 @@
                 Being alone and feeling lonely are two different things. 
                 Many people consider them to be the same but they're not. You can be alone without feeling lonely and can feel lonely even when you're around other people. 
             </p>
+            <span class="card" style="background:rgba(255,255, 255, 0); border:none; border-radius:0%">
+                <center><img class="card-img-top" :src="overthink" alt="Card image cap" style=" width: 800px;"></center>
+            </span>
             <p class="para">
                 Loneliness is related to depressive symptoms, lack of social support, or introvertism. 
                 Loneliness changes very little during adulthood hood until 75-80 years of age when it somewhat increases. 
@@ -74,7 +77,7 @@
                 Now during this time most people don’t want to surround themselves with negativity, but sub-consciously they zone out. 
             </p>
             <span class="card" style="background:rgba(255,255, 255, 0); border:none; border-radius:0%">
-                <center><img class="card-img-top" :src="overthink" alt="Card image cap" style=" width: 800px;"></center>
+                <center><img class="card-img-top" :src="smile" alt="Card image cap" style=" width: 800px;"></center>
             </span>
             <p class="para mt-5">
                 Now coming back to <span class="highlight">overthinking</span>. 
@@ -98,12 +101,14 @@
     import depression from '../assets/Blog/depression.jpg'
     import depression2 from '../assets/Blog/home.jpg'
     import overthink from '../assets/Blog/overthink.jpg'
+    import smile from '../assets/Blog/happy.jpg'
     export default {
         name: 'blog',
         data: () => ({
             depression,
             depression2,
-            overthink
+            overthink,
+            smile
         })
     }
 </script>

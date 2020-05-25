@@ -97,7 +97,7 @@
 
     <h5 class="text-center pt-5 m-4" v-if="isZone">District wise zones in {{ currState }}</h5>
     <center>
-      <div style="width: 70vw;">
+      
         <md-table v-model="zones" md-sort="zone" md-sort-order="asc" md-card md-fixed-header class="mb-4" v-if="isZone">
           <md-table-row slot="md-table-row" class="items" slot-scope="{ item }" >
             <md-table-cell md-label="Name of District" md-center md-sort-by="district" >
@@ -107,7 +107,7 @@
             </md-table-cell>
           </md-table-row>
         </md-table>
-      </div>
+      
     </center>
     <h5 class="pt-5 pb-3 text-center" style="color: red;">Central Helpline Number:<br> <a class="pt-1" href="tel:+91-11-239780461" style="color: red; text-decoration: none;">+91-11-23978046</a></h5>
     <center><a href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf" target="_Blank"><b-button variant="primary p-2" size="sm" >Helpline Numbers of States & Union Territories (UTs)</b-button></a></center>
@@ -115,16 +115,18 @@
 
 
     <h5 class="text-center" v-if="isCat">Essentials & Resources in {{ currState }}</h5>
-    <div class="justify-content-center py-3" v-if="isCat">
-      <b-form-group id="input-group-3" label-for="input-3" class="col-md-6 col-sm-12">
-        <b-form-select
-          id="input-3"
-          :options="catRes"
-          v-model="currCat"
-          required
-        ></b-form-select>
-      </b-form-group>
-    </div>
+    <center>
+      <div class="justify-content-center py-3" v-if="isCat">
+        <b-form-group id="input-group-3" label-for="input-3" class="col-md-6 col-sm-12">
+          <b-form-select
+            id="input-3"
+            :options="catRes"
+            v-model="currCat"
+            required
+          ></b-form-select>
+        </b-form-group>
+      </div>
+    </center>
 
 
     <b-row class="justify-content-center pt-3">
