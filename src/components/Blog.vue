@@ -89,7 +89,7 @@
                 watching a movie/stand up comedy, dancing your heart out, taking a good long shower, doodling, making chai/coffee for yourself in the evening, you can do a little exercise for yourself like suryanamaskar/cardio/or small and simple exercise to do any time of the day. 
                 Because exercise is important for a healthy mind. 
             </p>
-            <h4 class="pt-4 highlight text-center">NOTE :- You are perfect at whatever you are doing. Everyone is in the right place.</h4>
+            <h5 class="pt-4 highlight text-center">NOTE :- You are perfect at whatever you are doing. Everyone is in the right place.</h5>
         </b-container>
     </div>
 </template>
