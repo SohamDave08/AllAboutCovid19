@@ -2,7 +2,8 @@
     <div>
         <b-container>
             <h2 class="text-center pt-4">Deal with loneliness and overthinking during lockdown</h2>
-            <div class="text-center" style="color: #A8AAB2">by <a href="http://linkedin.com/in/kanan-pathak-6575a0199" target="_Blank" style="text-decoration: none"><span class="highlight">Kanan Pathak</span></a></div> <br><br>
+            <div class="text-center" style="color: #A8AAB2">by <a href="http://linkedin.com/in/kanan-pathak-6575a0199" target="_Blank" style="text-decoration: none"><span class="highlight">Kanan Pathak</span></a></div> 
+            <br><br>
             <center>
                 <span class="card" style="background:rgba(255,255, 255, 0); border:none; border-radius:0%">
                     <img class="card-img-top" :src="depression" alt="Card image cap" style=" width: 800px;">
