@@ -10,11 +10,11 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto pt-2"> 
-          <b-nav-item class="link-nav" @click="homeComp">Home</b-nav-item>
-          <b-nav-item class="link-nav" @click="indiaComp">India</b-nav-item>
-          <b-nav-item class="link-nav" @click="newsComp">News</b-nav-item>
-          <b-nav-item class="link-nav" @click="guidelineComp">Preventative Measures</b-nav-item>
-          <b-nav-item class="link-nav last-nav" @click="blogComp">Outlive Covid</b-nav-item>
+          <b-nav-item :class="{'link-nav':true, 'active':(home == true)}" @click="homeComp">Home</b-nav-item>
+          <b-nav-item :class="{'link-nav':true, 'active':(india == true)}" @click="indiaComp">India</b-nav-item>
+          <b-nav-item :class="{'link-nav':true, 'active':(news == true)}" @click="newsComp">News</b-nav-item>
+          <b-nav-item :class="{'link-nav':true, 'active':(guidelines == true)}" @click="guidelineComp">Preventative Measures</b-nav-item>
+          <b-nav-item :class="{'link-nav':true, 'last-nav':true, 'active':(blog == true)}" @click="blogComp">Outlive Covid</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

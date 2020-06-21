@@ -216,6 +216,7 @@
             this.lastUpdate = element.lastupdatedtime;
           }
         });
+        this.zones = [];
         zoneAPI.forEach(element => {
           if(element.state == this.currState)
           {
