@@ -2,30 +2,27 @@
   <div>
     <b-navbar toggleable="lg" type="light" variant="white" class="pl-5  pr-3 one-edge-shadow">
       
-      <b-navbar-brand href="#" @click="homeComp">
+      <b-navbar-brand href="/">
         <img :src="image" style="height: 30px; width: 150px;" />
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav class="ml-auto pt-2"> 
-          <b-nav-item :class="{'link-nav':true, 'active':(home == true)}" @click="homeComp">Home</b-nav-item>
-          <b-nav-item :class="{'link-nav':true, 'active':(india == true)}" @click="indiaComp">India</b-nav-item>
-          <b-nav-item :class="{'link-nav':true, 'active':(news == true)}" @click="newsComp">News</b-nav-item>
-          <b-nav-item :class="{'link-nav':true, 'active':(guidelines == true)}" @click="guidelineComp">Preventative Measures</b-nav-item>
-          <b-nav-item :class="{'link-nav':true, 'last-nav':true, 'active':(blog == true)}" @click="blogComp">Outlive Covid</b-nav-item>
+        <b-navbar-nav class="ml-auto pt-2">
+          <b-nav-item><router-link to="/" class="link-nav">Home</router-link></b-nav-item>
+          <b-nav-item><router-link to="/india" class="link-nav">India</router-link></b-nav-item>
+          <b-nav-item><router-link to="/news" class="link-nav">News</router-link></b-nav-item>
+          <b-nav-item><router-link to="/guidelines" class="link-nav">Preventative Measures</router-link></b-nav-item>
+          <b-nav-item><router-link to="/blog" class="link-nav last-nav">Outlive Covid</router-link></b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
-    
-    <div>
-      <Home v-if="home" class="pt-4"/>
-      <India v-if="india" class="pt-4"/>
-      <News v-if="news" class="pt-4" />
-      <Guidelines v-if="guidelines" class="pt-4" />
-      <Blog v-if="blog" class="pt-4" />
+
+    <div class="pt-4">
+      <router-view></router-view>
     </div>
+    
     <br><br><br>
     <div class="footer py-3">
       <b-container>
@@ -82,11 +79,6 @@
 </template>
 
 <script>
-  import Home from './components/Home.vue';
-  import India from './components/India.vue';
-  import News from './components/News.vue';
-  import Guidelines from './components/Guidelines.vue';
-  import Blog from './components/Blog.vue';
   import image from './assets/image.png';
   export default {
     name: 'app',
@@ -99,67 +91,22 @@
         guidelines: false,
         blog: false,
       }
-    },
-    components:{
-      Home: Home,
-      India: India,
-      News: News,
-      Guidelines: Guidelines,
-      Blog: Blog
-    },
-    methods: {
-      homeComp()
-      {
-        this.home = true;
-        this.india = false;
-        this.news = false;
-        this.guidelines = false;
-        this.blog = false;
-      },
-      indiaComp()
-      {
-        this.india = true;
-        this.home = false;
-        this.news = false;
-        this.blog = false;
-        this.guidelines = false;
-      },
-      newsComp()
-      {
-        this.news= true;
-        this.india = false;
-        this.home = false;
-        this.blog = false;
-        this.guidelines = false;
-      },
-      guidelineComp()
-      {
-        this.news= false;
-        this.india = false;
-        this.home = false;
-        this.blog = false;
-        this.guidelines = true;
-      },
-      blogComp()
-      {
-        this.news= false;
-        this.india = false;
-        this.home = false;
-        this.guidelines = false;
-        this.blog = true;
-      }
     }
   }
 </script>
 
 <style>
   .link-nav{
-    letter-spacing: 1px;
-    padding-right: 15px;
-    font-weight: 500;
+    letter-spacing: 1px !important;
+    padding-right: 15px !important;
+    font-weight: 500 !important;
+    color: rgba(0,0,0,0.5) !important;
+    text-decoration: none;
+    border: none;
+    border-bottom: none;
   }
   .last-nav{
-    padding-right: 50px;
+    padding-right: 50px !important;
   }
   .one-edge-shadow {
     -webkit-box-shadow: 0 6px 6px -6px rgb(0,0,0,0.7);
@@ -175,5 +122,8 @@
   .credits{
     background: black;
     color: white;
+  }
+  a.router-link-exact-active {
+    color: black !important;
   }
 </style>
