@@ -126,7 +126,7 @@
 <script>
     import ICountUp from 'vue-countup-v2';
     import mapIcon from '../assets/contamination.png';
-    const API = 'https://covid19-server.chrismichael.now.sh/api/v1/AllReports';
+    const API = 'https://cors-anywhere.herokuapp.com/https://covid19-server.chrismichael.now.sh/api/v1/AllReports';
     var tempAPI;
     export default {
         name: 'world',
