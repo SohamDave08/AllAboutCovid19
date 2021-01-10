@@ -64,6 +64,7 @@
                             :endVal="recovered"
                             :options="options"
                             /> 
+                            <div class="text-center mt-3" style="font-size: 14px; color:green">{{ newRecovery }}</div>
                         </b-card-text>
                         <b-card-text class="case-count" v-else>
                             <div class="loader-recoveries"></div>
@@ -127,6 +128,8 @@
     import ICountUp from 'vue-countup-v2';
     import mapIcon from '../assets/contamination.png';
     const API = 'https://cors-anywhere.herokuapp.com/https://covid19-server.chrismichael.now.sh/api/v1/AllReports';
+    const NewAPI = `https://api.covid19api.com/summary`;
+    let newAPIData;
     var tempAPI;
     export default {
         name: 'world',
@@ -134,6 +137,7 @@
             return{
                 confirmedCases: 0,
                 newCases: 0,
+                newRecovery: 0,
                 activeCases: 0,
                 recovered: 0,
                 deaths: 0,
@@ -159,6 +163,15 @@
             ICountUp
         },
         created() {
+            fetch(NewAPI)
+            .then(response => response.json())
+            .then(data => {
+                newAPIData = data;
+                //console.log(newAPIData);
+                this.countLoad(newAPIData);
+            });
+
+
             fetch(API)
             .then(response => response.json())
             .then(data => {
@@ -168,11 +181,7 @@
                 this.worldBar(tempAPI);
             });
             this.chartLineLoad('https://covid19.mathdro.id/api/daily');
-            
-
-            
             this.loadMap('https://covid19.mathdro.id/api/confirmed');
-
         },
         watch: {
             currCountry: function(newCountry) {
@@ -200,31 +209,41 @@
         methods:{
             countLoad(url)
             {
-                url.forEach(element => {
-                    if(element.Country != 'Total:')
-                        this.countries.push(element.Country);
-                    if(element.Country == 'World')
-                    {
-                        var strData = element.TotalCases.split(',');
-                        this.confirmedCases = parseInt(strData.join(''));
+                console.log(url.Global);
+                this.confirmedCases = url.Global.TotalConfirmed;
+                this.activeCases = url.Global.TotalConfirmed - url.Global.TotalDeaths;
+                this.recovered = url.Global.TotalRecovered;
+                this.deaths = url.Global.TotalDeaths;
+                this.newCases = url.Global.NewConfirmed;
+                this.newDeaths = url.Global.NewDeaths;
+                this. newRecovery = url.Global.NewRecovered;
+                this.dataCollected = true;
+                // this.countries.puhs()
+                // url.forEach(element => {
+                //     if(element.Country != 'Total:')
+                //         this.countries.push(element.Country);
+                //     if(element.Country == 'World')
+                //     {
+                //         var strData = element.TotalCases.split(',');
+                //         this.confirmedCases = parseInt(strData.join(''));
 
-                        strData = element.ActiveCases.split(',');
-                        this.activeCases = parseInt(strData.join(''));
+                //         strData = element.ActiveCases.split(',');
+                //         this.activeCases = parseInt(strData.join(''));
 
-                        strData = element.TotalRecovered.split(',');
-                        this.recovered = parseInt(strData.join(''));
+                //         strData = element.TotalRecovered.split(',');
+                //         this.recovered = parseInt(strData.join(''));
 
-                        strData = element.TotalDeaths.split(',');
-                        this.deaths = parseInt(strData.join(''));
+                //         strData = element.TotalDeaths.split(',');
+                //         this.deaths = parseInt(strData.join(''));
 
-                        this.criticalCases = element.Serious_Critical;
-                        this.newCases = element.NewCases;
-                        this.newDeaths = element.NewDeaths;
-                        this.totalTest = element.TotalTests;
+                //         this.criticalCases = element.Serious_Critical;
+                //         this.newCases = element.NewCases;
+                //         this.newDeaths = element.NewDeaths;
+                //         this.totalTest = element.TotalTests;
 
-                        this.dataCollected = true;
-                    }
-                });
+                //         this.dataCollected = true;
+                //     }
+                // });
                 
                 
             },

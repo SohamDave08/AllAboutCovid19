@@ -52,7 +52,7 @@
               <div class="card" style="background(255,255,255,0); border: none; width: max-content">
                 <div class="card-body">
                   <h5 class="card-title text-center pb-3">Soham Dave</h5>
-                  <a class="mx-3" href="https://github.com/DaveSoham08" target="_blank">
+                  <a class="mx-3" href="https://github.com/SohamDave08" target="_blank">
                     <i class="fab fa-github fa-2x"></i>
                   </a>
                   <a class="mx-3" href="https://www.linkedin.com/in/soham-dave-115206189/" target="_blank">
