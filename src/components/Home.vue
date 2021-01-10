@@ -226,33 +226,6 @@
                 this.newDeaths = this.ArrangedData[this.currCountry].NewDeaths;
                 this. newRecovery = this.ArrangedData[this.currCountry].NewRecovered;
                 this.dataCollected = true;
-
-
-                // url.forEach((countryCount) => {
-                //     if(countryCount.Country == this.currCountry)
-                //     {
-                //         var strData = countryCount.TotalCases.split(',');
-                //         this.confirmedCases = parseInt(strData.join(''));
-
-                //         strData = countryCount.ActiveCases.split(',');
-                //         this.activeCases = parseInt(strData.join(''));
-
-                //         strData = countryCount.TotalRecovered.split(',');
-                //         this.recovered = parseInt(strData.join(''));
-
-                //         strData = countryCount.TotalDeaths.split(',');
-                //         this.deaths = parseInt(strData.join(''));
-
-                            
-                //         this.criticalCases = countryCount.Serious_Critical;
-                //         this.newCases = countryCount.NewCases;
-                //         this.newDeaths = countryCount.NewDeaths;
-                //         this.totalTest = countryCount.TotalTests;
-
-                //         this.dataCollected = true;
-                //     }
-                // });
-                
             },
             chartLineLoad(url)
             {
@@ -277,21 +250,6 @@
                 this.barData['Recovered'] = this.ArrangedData[this.currCountry].TotalRecovered;
                 this.barData['Deaths'] = this.ArrangedData[this.currCountry].TotalDeaths;
                 this.displayBar = true;
-                // url.forEach((element) => {
-                //     if(element.Country == this.currCountry)
-                //     {
-                //         var strData = element.TotalCases.split(',');
-                //         this.barData['Infected'] = parseInt(strData.join(''));
-
-                //         strData = element.TotalRecovered.split(',');
-                //         this.barData['Recovered'] = parseInt(strData.join(''));
-
-                //         strData = element.TotalDeaths.split(',');
-                //         this.barData['Deaths'] = parseInt(strData.join(''));
-
-                        
-                //     }
-                // });
             },
             worldBar() 
             {
@@ -300,24 +258,6 @@
                 this.barData['Recovered'] = element.TotalRecovered;
                 this.barData['Deaths'] = element.TotalDeaths;
                 this.worldBarData = true;
-
-                // url.forEach(element => {
-                //     if(element.Country == this.currCountry)
-                //     {
-                //         var strData = element.TotalCases.split(',');
-                //         this.barData['Infected'] = parseInt(strData.join(''));
-
-                //         strData = element.TotalRecovered.split(',');
-                //         this.barData['Recovered'] = parseInt(strData.join(''));
-
-                //         strData = element.TotalDeaths.split(',');
-                //         this.barData['Deaths'] = parseInt(strData.join(''));
-
-                        
-                //     }
-                // });
-
-
             },
             loadMap(api_url)
             {

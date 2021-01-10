@@ -55,7 +55,7 @@
                   <a class="mx-3" href="https://github.com/SohamDave08" target="_blank">
                     <i class="fab fa-github fa-2x"></i>
                   </a>
-                  <a class="mx-3" href="https://www.linkedin.com/in/soham-dave-115206189/" target="_blank">
+                  <a class="mx-3" href="https://www.linkedin.com/in/sohamdave08/" target="_blank">
                     <i class="fab fa-linkedin fa-2x"></i>
                   </a>
                   <a class="mx-3" href="mailto:dave.soham2000@gmail.com">
@@ -72,7 +72,7 @@
     <div class="credits">
       <div class="col-md-12 py-3 text-center">
         <div style="font-size: 14px;"><i>Remember, The sun always shines after a storm</i></div> <br>
-        <h5 style="  font-size: 15px;">Developed with <span style="color:#ff3333">❤</span> by <a href="https://www.linkedin.com/in/rudra-dave/" target="_blank" style="color:white; text-decoration: none;">Rudra Dave</a> & <a href="https://www.linkedin.com/in/soham-dave-115206189/" target="_blank" style="color:white; text-decoration: none;">Soham Dave</a></h5>
+        <h5 style="  font-size: 15px;">Developed with <span style="color:#ff3333">❤</span> by <a href="https://www.linkedin.com/in/rudra-dave/" target="_blank" style="color:white; text-decoration: none;">Rudra Dave</a> & <a href="https://www.linkedin.com/in/sohamdave08/" target="_blank" style="color:white; text-decoration: none;">Soham Dave</a></h5>
       </div>
     </div>
   </div>
