@@ -2,11 +2,11 @@
   <b-container>
     <h3 class="text-center m-3">
       Report for INDIA
-      <center>
         <span class="card" style="background:rgba(255,255, 255, 0); border:none; ">
-            <img class="card-img-top" :src="flag" alt="Card image cap" style=" width: 80px;">
+            <center>
+              <img class="card-img-top" :src="flag" alt="Card image cap" style=" width: 80px;">
+            </center>
         </span>
-      </center>
     </h3>
     <br><br>
     <h5 class="text-center">Select State:</h5>
@@ -160,6 +160,7 @@
 <script>
   import ICountUp from 'vue-countup-v2';
   import flagIcon from '../assets/india.png';
+  // const newAPI = ``;
   var zoneAPI;
   var indiaAPI;
   var resAPI;
